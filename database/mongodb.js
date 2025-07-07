@@ -13,11 +13,11 @@ if (!DATABASE_URI) {
 const dbconnect = async () => {
     try{
         await mongoose.connect(DATABASE_URI);
-        console.log("MongoDB connected successfully");
+        console.log(`Connected to the database successfully in ${NODE_ENV} mode`);
     } catch (error) {
         console.error("Error connecting to the database",error); 
         process.exit(1);
-        
+
     }
 }
 
